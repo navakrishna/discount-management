@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:sa
+    username: sa
+    password: 
+  h2: 
+    console:
+      enabled: true
+    path: /h2
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:9000/services/user
+      
+invalid:
+  data: Invalid attribute data 
+  
+rule:
+  groupId: com.discount
+  artifactId: rules
+  version: 1.0
