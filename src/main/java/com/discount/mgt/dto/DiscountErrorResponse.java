@@ -13,15 +13,15 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DiscountErrorResponse {
 
-	@ApiModelProperty(value = "Problem Detail Title", required = true, example = "Resource not found")
+	@ApiModelProperty(value = "Problem Detail Title", required = true, example = "Business Rules failure")
     private String title;
-    @ApiModelProperty(value = "Field is identifier and as such it MAY be used to denote additional error codes", example = "ERR_00001")
+    @ApiModelProperty(value = "Field is identifier and as such it MAY be used to denote additional error codes", example = "Invalid attribute data")
     private String type;
-    @ApiModelProperty(value = "Further detail of the Problem or a user understandable message", example = "Missing authentication credentials")
+    @ApiModelProperty(value = "Further detail of the Problem or a user understandable message", example = "Business Rules failure")
     private String detail;
     @ApiModelProperty(value = "The URI of the resource in question", example = "/user/abc")
     private String instance;
-    @ApiModelProperty(value = "HTTP Status Code", example = "404")
+    @ApiModelProperty(value = "HTTP Status Code", example = "422")
     private Integer status;
 	public DiscountErrorResponse() {
 		
